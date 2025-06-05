@@ -576,6 +576,13 @@
                     }, 300);
         });
     });
+    // Fecha o menu mobile ao clicar em um link
+    document.querySelectorAll('.menu-dropdown .menunav a').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.querySelector('.menu-dropdown');
+            menu.classList.remove('open');
+        });
+    });
 
     </script>
 
