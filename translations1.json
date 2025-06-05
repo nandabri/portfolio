@@ -1,5 +1,6 @@
 {
     "en": {
+        "language": "🌐 Language ▾",
         "brand": "Fernanda.dev",
         "about": "About",
         "services": "Services",
@@ -30,6 +31,7 @@
         "footer": "© 2025 All rights reserved | Designed and developed by Fernanda Belmont"
     },
     "pt": {
+        "language": "🌐 Idioma ▾",
         "brand": "Fernanda.dev",
         "about": "Sobre",
         "services": "Serviços",
@@ -60,6 +62,7 @@
         "footer": "© 2025 Todos os direitos reservados | Criado e desenvolvido por Fernanda Belmont"
     },
     "he": {
+        "language": "🌐 שפה ▾",
         "brand": "Fernanda.dev",
         "about": "אודות",
         "services": "שירותים",
@@ -70,7 +73,7 @@
         "hero-desc": "מפתחת פולסטאק המתמקדת ביצירת חוויות דיגיטליות מודרניות, נגישות ופונקציונליות.",
         "view-projects": "לצפייה בפרויקטים",
         "about-title": "עליי",
-        "about-text": "אני מפתחת פולסטאק וכרגע נמצאת בסמסטר השישי בלימודי מערכות מידע ב-PUC Minas. אני גם לומדת בקורס התמחות בפיתוח ווב פול סטאק, בו אני משפרת את כישורי ב:\n\nפרונט אנד: WordPress, HTML, CSS, JavaScript, React\n\nבק אנד: Node.js, MongoDB, Python\n\nכלי פיתוח וניהול גרסאות: Git, GitHub, VSCode\n\nטכנולוגיות מתקדמות: אוטומציה עם בינה מלאכותית, למידת מכונה, רשתות עצביות\n\nאני אוהבת להפוך רעיונות לפתרונות דיגיטליים אלגנטיים ויעילים. אני עובדת עם תשומת לב לפרטים, תקשורת ברורה ומיקוד ביצירת ערך.",
+        "about-text": "אני מפתחת פולסטאק וכרגע נמצאת בסמסטר השישי בלימודי מערכות מידע ב-PUC Minas. אני גם לומדת בקורס התמחות ב\"Web Full Stack\", בו אני משפרת את כישורי ב:\n\nפרונט אנד: WordPress, HTML, CSS, JavaScript, React\n\nבק אנד: Node.js, MongoDB, Python\n\nכלי פיתוח וניהול גרסאות: Git, GitHub, VSCode\n\nטכנולוגיות מתקדמות: אוטומציה עם בינה מלאכותית, למידת מכונה, רשתות עצביות\n\nאני אוהבת להפוך רעיונות לפתרונות דיגיטליים אלגנטיים ויעילים. אני עובדת עם תשומת לב לפרטים, תקשורת ברורה ומיקוד ביצירת ערך.",
         "services-title": "שירותים",
         "service-1": "אתרים מודרניים ומהירים שעובדים בצורה מושלמת בכל מכשיר",
         "service-2": "מערכות ודשבורדים מותאמים אישית לעסק שלך",
@@ -91,6 +94,7 @@
     },
 
     "ar": {
+        "language": "🌐 اللغة ▾",
         "brand": "Fernanda.dev",
         "about": "حول",
         "services": "الخدمات",
@@ -121,6 +125,7 @@
         "footer": "© 2025 جميع الحقوق محفوظة | التصميم والتطوير من قبل فرنندا بيلمونت"
     },
     "ru": {
+        "language ▾": "🌐 Язык ▾",
         "brand": "Fernanda.dev",
         "about": "Обо мне",
         "services": "Услуги",
@@ -149,5 +154,6 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "footer": "© 2025 Все права защищены | Разработка и дизайн Фернанды Бельмонт"
+
     }
 }
