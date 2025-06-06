@@ -11,8 +11,8 @@
     <style>
         section {
             text-align: justify;
- 
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -27,13 +27,14 @@
         }
 
         header {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            display: flex;
             align-items: center;
             position: fixed;
             top: 0;
             width: 100%;
             background-color: #fff;
+            justify-content: space-between;
+
             padding: 1rem 2rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -263,17 +264,15 @@
         /* Menu hambúrguer - somente mobile */
         .hamburger-container {
             display: inline-block;
-    position: relative;
-    justify-self: end; /* alinha à direita do grid */
-    margin-right: -10rem; /* ⬅️ adiciona um espacinho da borda direita */
-            
+            position: relative;
+
         }
 
         @media (max-width: 768px) {
             .hamburger-container {
                 display: inline-block;
                 position: relative;
-                
+
             }
 
             .menu-toggle {
@@ -368,6 +367,30 @@
         p {
             text-align: justify;
         }
+
+        /* Posição correta do menu dropdown no modo RTL */
+        [dir="rtl"] .menu-dropdown {
+            left: 0;
+            right: auto;
+            text-align: right;
+            transform: translateX(8rem); /* ajuste fino para "puxar para o meio" */
+        }
+
+        /* Posição padrão LTR (já existe, mas vamos garantir) */
+        [dir="ltr"] .menu-dropdown,
+        :not([dir]) .menu-dropdown {
+            right: 0;
+            left: auto;
+            text-align: left;
+        }
+        /* Alinhar o conteúdo textual à direita no menu RTL */
+[dir="rtl"] .menu-dropdown,
+[dir="rtl"] .menu-dropdown nav,
+[dir="rtl"] .menu-dropdown a {
+    text-align: right;
+    direction: rtl;
+}
+
     </style>
 </head>
 
