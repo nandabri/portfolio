@@ -26,6 +26,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
         rel="stylesheet" />
     <style>
+
+        header>* {
+            align-self: center;
+        }
+
         #theme-toggle::before {
             content: ' ';
             margin-right: 0.5rem;
@@ -53,6 +58,7 @@
         }
 
         header {
+            min-height: 80px;
             padding: 20px 2rem;
             display: flex;
             align-items: center;
@@ -61,7 +67,7 @@
             width: 100%;
             background-color: #fff;
             justify-content: space-between;
-            gap: 1rem 1rem;
+            gap: 1rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
@@ -85,11 +91,13 @@
             background-color: #f0f0f0;
         }
 
+
+
         .lang-container {
             color: #212529;
             position: relative;
             justify-self: end;
-            margin-top: 1rem;
+            margin-top: 0;
         }
 
 
@@ -174,7 +182,7 @@
             /* CORRETO: espaço abaixo do header fixo */
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 768px) {
             .hero {
                 margin-top: 70px;
                 /* mais espaço para header no mobile estreito */
@@ -299,9 +307,11 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             display: block;
             background-color: #444;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 768px) {
             .foto-perfil {
                 width: 120px;
                 height: 120px;
@@ -382,7 +392,7 @@
             }
         }
 
-        @media (min-width: 769px) {
+        @media (min-width: 768px) {
             .hamburger-container {
                 display: none;
             }
@@ -440,7 +450,7 @@
             color: #f1f1f1;
         }
 
-        header.dark-mode .lang-container {
+        body.dark-mode .lang-container {
             background-color: #1e1e1e;
             color: #f1f1f1;
         }
@@ -479,14 +489,10 @@
         }
 
         body.dark-mode h1,
-        p {
+        body.dark-mode p {
             color: #ccc;
         }
 
-        body.dark-mode .foto-perfil {
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-
-        }
 
         body.dark-mode .foto-perfil-wrapper {
             filter: brightness(0.9);
@@ -506,14 +512,8 @@
         }
 
         body.dark-mode .foto-perfil {
-            width: 160px;
-            height: 160px;
-            max-width: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            display: block;
             background-color: #2a003f;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         body.dark-mode #theme-toggle {
@@ -533,25 +533,25 @@
             background-color: #2a003f;
             color: white;
             cursor: pointer;
-            margin-left: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-            line-height: 0;
+            line-height: 1;
             align-self: center;
+            transform: translateY(-13px);
+        
         }
 
 
         body.dark-mode #logo-img {
-            max-height: 70px;
+            max-height: 80px;
+            display: block;
         }
 
-
         #logo-img {
+            display: block;
             width: auto;
             height: auto;
             max-height: 80px;
-            /* controla o tamanho do logo em qualquer modo */
         }
+
 
 
         body.dark-mode section p {
@@ -574,6 +574,8 @@
 
             #theme-toggle .theme-text {
                 display: none;
+                line-height: 1;
+
             }
 
             #theme-toggle::after {
@@ -597,7 +599,7 @@
 
 
     <header>
-        <div><img src="FernandaLight.png" alt="Fernanda dev" id="logo-img"></div>
+        <div><img src="FernandaLight.png" alt="logo" id="logo-img"></div>
 
         <!-- Menu Desktop (visível apenas no desktop) -->
         <nav class="menunav desktop-only">
