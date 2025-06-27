@@ -26,6 +26,15 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
         rel="stylesheet" />
     <style>
+        #theme-toggle::before {
+            content: ' ';
+            margin-right: 0.5rem;
+        }
+
+        body.dark-mode #theme-toggle::before {
+            content: ' ';
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -52,7 +61,7 @@
             width: 100%;
             background-color: #fff;
             justify-content: space-between;
-            gap: 1rem 1rem ;
+            gap: 1rem 1rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
@@ -83,21 +92,31 @@
             margin-top: 1rem;
         }
 
+
         body.dark-mode .lang-button {
-    color: #4c4747; /* ou outra cor vibrante no modo escuro */
-}
+            color: #4c4747;
+        }
+
 
         .lang-button {
-            background-color: transparent;
-            border: none;
+            min-width: 120px;
+            max-width: 160px;
             padding: 6px 12px;
             font-weight: 600;
-            color: #212529;
+            background-color: transparent;
+            border: none;
+            color: #888;
+            /* cor mais suave no modo claro */
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
+
+
 
         .lang-dropdown {
             display: none;
@@ -231,6 +250,7 @@
             background-color: #696767;
             color: #f1f1f1;
         }
+
         #btnToTop {
             display: none;
             position: fixed;
@@ -497,7 +517,7 @@
         }
 
         body.dark-mode #theme-toggle {
-            background-color:#985eff;
+            background-color: #985eff;
             color: #f1f1f1;
         }
 
@@ -520,12 +540,13 @@
             align-self: center;
         }
 
-    
+
         body.dark-mode #logo-img {
             content: url('fernandaDark.png');
             width: 90px;
             height: auto;
         }
+
         img {
             width: 90px;
             height: auto;
@@ -540,33 +561,32 @@
         }
 
         @media (max-width: 768px) {
-    #theme-toggle {
-        width: 44px;
-        height: 44px;
-        padding: 0;
-        font-size: 1.5rem;
-        border-radius: 50%;
-        position: relative;
-    }
+            #theme-toggle {
+                width: 44px;
+                height: 44px;
+                padding: 0;
+                font-size: 1.5rem;
+                border-radius: 50%;
+                position: relative;
+            }
 
-    #theme-toggle .theme-text {
-        display: none;
-    }
+            #theme-toggle .theme-text {
+                display: none;
+            }
 
-    #theme-toggle::after {
-        content: '🌙';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.5rem;
-    }
+            #theme-toggle::after {
+                content: '🌙';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.5rem;
+            }
 
-    body.dark-mode #theme-toggle::after {
-        content: '☀';
-    }
-}
-
+            body.dark-mode #theme-toggle::after {
+                content: '☀';
+            }
+        }
     </style>
 
 </head>
@@ -621,7 +641,7 @@
         </div>
 
         <button id="theme-toggle" class="btn" aria-label="Alternar modo claro/escuro">
-            <span class="theme-text">◑ Dark Mode</span> </button>
+            <span class="theme-text">Dark Mode</span> </button>
 
 
 
