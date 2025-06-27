@@ -29,8 +29,8 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "footer": "© 2025 All rights reserved | Designed and developed by Fernanda Belmont",
-        "dark-mode": " ◑ Dark Mode",
-        "light-mode": " ◑ Light Mode"
+        "dark-mode": "🌙 Dark Mode",
+        "light-mode": "☀ Light Mode"
     },
     "pt": {
         "brand": "Fernanda.dev",
@@ -61,8 +61,8 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "footer": "© 2025 Todos os direitos reservados | Criado e desenvolvido por Fernanda Belmont",
-        "dark-mode" : "◑ Modo Escuro",
-        "light-mode": " ◑ Modo Claro"
+        "dark-mode" : "🌙 Modo Escuro",
+        "light-mode": "☀ Modo Claro"
     },
     "he": {
         "brand": "Fernanda.dev",
@@ -93,8 +93,8 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "footer": "© 2025 כל הזכויות שמורות | עיצוב ופיתוח על ידי פרננדה בלמונט",
-        "dark-mode": " ◑ מצב כהה",
-        "light-mode": " ◑ מצב בהיר"
+        "dark-mode": "🌙 מצב כהה",
+        "light-mode": "☀ מצב בהיר"
     },
 
     "ar": {
@@ -126,8 +126,8 @@
         "github": "جيت هاب",
         "linkedin": "لينكد إن",
         "footer": "© 2025 جميع الحقوق محفوظة | التصميم والتطوير من قبل فرنندا بيلمونت",
-        "dark-mode": " ◑ الوضع الداكن",
-        "light-mode": "◑ الوضع الفاتح"
+        "dark-mode": "🌙 الوضع الداكن",
+        "light-mode": "☀ الوضع الفاتح"
     },
 
     "ru": {
@@ -159,8 +159,8 @@
         "github": "GitHub",
         "linkedin": "LinkedIn",
         "footer": "© 2025 Все права защищены | Разработка и дизайн Фернанды Бельмонт",
-        "dark-mode": "◑ Тёмный режим",
-        "light-mode": " ◑ Светлый режим"
+        "dark-mode": "🌙 Тёмный режим",
+        "light-mode": "☀ Светлый режим"
 
     }
 }
