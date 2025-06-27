@@ -520,6 +520,12 @@
             align-self: center;
         }
 
+    
+        body.dark-mode #logo-img {
+            content: url('fernandaDark.png');
+            width: 90px;
+            height: auto;
+        }
         img {
             width: 90px;
             height: auto;
@@ -532,6 +538,35 @@
         section p {
             color: black;
         }
+
+        @media (max-width: 768px) {
+    #theme-toggle {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    #theme-toggle .theme-text {
+        display: none;
+    }
+
+    #theme-toggle::after {
+        content: '🌙';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+    }
+
+    body.dark-mode #theme-toggle::after {
+        content: '☀';
+    }
+}
+
     </style>
 
 </head>
@@ -540,7 +575,7 @@
 
 
     <header>
-        <div><img src="FernandaLight.png" alt="Fernanda dev" img id="logo-img"></div>
+        <div><img src="FernandaLight.png" alt="Fernanda dev" id="logo-img"></div>
 
         <!-- Menu Desktop (visível apenas no desktop) -->
         <nav class="menunav desktop-only">
@@ -584,8 +619,9 @@
                 </div>
             </div>
         </div>
-        <button id="theme-toggle" class="btn" data-i18n="dark-mode" aria-label="Alternar modo claro/escuro">◑ Dark
-            Mode</button>
+
+        <button id="theme-toggle" class="btn" aria-label="Alternar modo claro/escuro">
+            <span class="theme-text">◑ Dark Mode</span> </button>
 
 
 
@@ -729,16 +765,20 @@
                 }
             });
 
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            const themeKey = isDarkMode ? 'light-mode' : 'dark-mode';
-            const themeToggle = document.getElementById('theme-toggle');
-            if (content[themeKey] && themeToggle) {
-                themeToggle.innerHTML = content[themeKey];
+
+            // Atualiza o texto do botão de tema (dentro do span)
+            const themeToggleSpan = document.querySelector('#theme-toggle .theme-text');
+            if (themeToggleSpan) {
+                const themeKey = document.body.classList.contains('dark-mode') ? 'light-mode' : 'dark-mode';
+                if (content[themeKey]) {
+                    themeToggleSpan.textContent = content[themeKey];
+                }
             }
         }
 
         // Trocar idioma
         async function changeLanguage(lang) {
+
             const res = await fetch('translations1.json');
             const translations = await res.json();
             const content = translations[lang];
